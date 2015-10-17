@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block corpo %}
+
+<h2>Remover Tipo Despesa</h2>
+
+<form action="" method="post">
+
+	{% csrf_token %}
+	
+	<table>
+		<tr>
+			<td width='100px'>
+				<p style="color: rgb(0,0,0);font-size:20px;font-weight: bold;">Nome</p>
+			</td>
+			<td width='100px'>
+				{{ item.nome }}
+			</td>
+		</tr>
+	
+	</table>
+
+	</br>
+	</br>
+	<button type="submit">Remover</button> ou <a href="/listaTipoDespesa/">Cancelar</>
+	
+</form>
+
+{% endblock %}
+
+

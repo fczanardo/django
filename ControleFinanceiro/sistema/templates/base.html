@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+		"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<head>
+		{% block cabecalho %}
+			<title>CONTROLE FINANCEIRO DOMESTICO</title>
+		{% endblock %}
+	</head>
+	
+	<h1>CONTROLE FINANCEIRO DOMESTICO</h1>
+	
+	<a href="/adicionaTipoDespesa/">Adicionar Tipo Despesa</a>
+	 - 
+	<a href="/adicionaDespesa/">Adicionar Despesa</a>
+	 - 
+	<a href="/adicionaGanho/">Adicionar Ganho</a>
+	 - 
+	<a href="/listaTipoDespesa/">Lista Tipo Despesa</a>
+	 - 
+	<a href="/listaDespesa/">Lista Despesa</a>
+	 - 
+	<a href="/listaGanho/">Lista Ganho</a>
+	 - 
+	<a href="/graficoComparativoTela/">Grafico Comparativo</a>
+	
+	<body style="background-color: #cccccc;font-family:sans-serif;" >
+		<p><a href="/logout/" style="position: absolute;right: 10px;">logout</a></p>
+		
+		</br>
+
+		{% block corpo %}
+		{% endblock %}
+	</body>
+	
+	<style type="text/css">
+		a:link, a:visited {
+			text-decoration: none
+			}
+		a:hover {
+			text-decoration: underline; 
+			color: #f00
+			}
+		a:active {
+			text-decoration: none
+			}
+		
+		
+		table {
+				border-collapse:collapse;
+				background:#EFF4FB url(http://www.roscripts.com/images/teaser.gif) repeat-x;
+				border-left:1px solid #686868;
+				border-right:1px solid #686868;
+				font:0.8em/145% 'Trebuchet MS',helvetica,arial,verdana;
+				color: #333;
+		}
+
+		td, th {
+				padding:5px;
+		}
+
+		caption {
+				padding: 0 0 .5em 0;
+				text-align: left;
+				font-size: 1.4em;
+				font-weight: bold;
+				text-transform: uppercase;
+				color: #333;
+				background: transparent;
+		}
+
+		/* =links
+		----------------------------------------------- */
+
+		table a {
+				color:#950000;
+				text-decoration:none;
+		}
+
+		table a:link {}
+
+		table a:visited {
+				font-weight:normal;
+				color:#666;
+				text-decoration: line-through;
+		}
+
+		table a:hover {
+				border-bottom: 1px dashed #bbb;
+		}
+
+		/* =head =foot
+		----------------------------------------------- */
+
+		thead th, tfoot th, tfoot td {
+				background:#333 url(http://www.roscripts.com/images/llsh.gif) repeat-x;
+				color:#fff
+		}
+
+		tfoot td {
+				text-align:right
+		}
+
+		/* =body
+		----------------------------------------------- */
+
+		tbody th, tbody td {
+				border-bottom: dotted 1px #333;
+		}
+
+		tbody th {
+				white-space: nowrap;
+		}
+
+		tbody th a {
+				color:#333;
+		}
+
+		.odd {}
+
+		tbody tr:hover {
+				background:#fafafa
+		}
+
+	
+		
+	</style>
+	
+</html>

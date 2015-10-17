@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block corpo %}
+
+<a href="/">Voltar</a>
+</br>
+</br>
+
+<h2>Lista Ganho</h2>
+
+<table BORDER="1"  width='700px'>
+	<thead>
+		<th >
+			Tipo
+		</th>
+		<th width='15%'>
+			Data
+		</th>
+		<th width='15%'>
+			Valor
+		</th>
+		
+		<th width='15%'>
+			Editar
+		</th>
+		<th width='15%'>
+			Remover
+		</th>
+	</thead>
+	
+	{% for item in lista_itens %}
+
+	<tbody>
+		<tr>
+			<td> 
+				{{ item.tipo}} 
+			</td>
+			<td width='15%'>
+				{{ item.data|date:'d/m/Y' }} 
+			</td>
+			<td width='15%'>
+				{{ item.valor }}
+			</td>
+			<td width='15%' >
+				<a href="/itemGanho/{{ item.id }}">EDITAR</a>
+			</td>
+			<td width='15%'>
+				<a href="/removeGanho/{{ item.id }}">REMOVER</a>	
+			</td>
+		</tr>
+	</tbody>
+	
+	{% empty %}
+		<li style="color: rgb(255,0,0)">Sem itens na lista</li></br>
+	{% endfor %}
+</table>
+
+{% endblock %}

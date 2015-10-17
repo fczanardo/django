@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block corpo %}
+
+	<a href="/">Voltar</a>
+	</br>
+	</br>
+	
+	<h2>Geracao de grafico comparativo por mes/ano</h2>
+
+	<form action="" method="post">
+
+		{% csrf_token %}
+		{{ form.as_p }}
+		<h5>(Sera considerado apenas o mes e o ano)</h5>
+		<button type="submit"  formtarget="_blank">Gerar Grafico</button>
+	</form>
+	
+{% endblock %}

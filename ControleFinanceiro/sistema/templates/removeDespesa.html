@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block corpo %}
+
+<h2>Remover Despesa</h2>
+
+<form action="" method="post">
+
+	{% csrf_token %}
+	
+	<table>
+			<tr>
+				<td width='100px'>
+					<p style="color: rgb(0,0,0);font-size:20px;font-weight: bold;">Tipo Despesa </p>
+				</td>
+				<td width='100px'>
+					{{ item.tipoDespesa.nome }}
+				</td>
+			</tr>
+			
+			<tr>
+				<td width='100px'>
+					<p style="color: rgb(0,0,0);font-size:20px;font-weight: bold;">Data</p>
+				</td>
+				<td width='100px'>
+					{{ item.data }}
+				</td>
+			</tr>
+			
+			<tr>
+				<td width='100px'>
+					<p style="color: rgb(0,0,0);font-size:20px;font-weight: bold;">Valor</p>
+				</td>
+				<td width='100px'>
+					{{ item.valor }}
+				</td>
+			</tr>
+		</table>
+
+		
+		</br>
+		</br>
+	<button type="submit">Remover</button> ou <a href="/listaDespesa/">Cancelar</>
+	
+</form>
+
+{% endblock %}
